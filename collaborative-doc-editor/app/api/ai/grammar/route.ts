@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Text is required" }, { status: 400 })
     }
 
-    // In a real app, this would call the Chatanywhere API
+    // In a real app, this would call the actual Chatanywhere API
     // For this demo, we'll simulate a response
 
     // Simulate API call delay
