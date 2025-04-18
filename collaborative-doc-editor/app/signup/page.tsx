@@ -43,7 +43,7 @@ export default function SignupPage() {
 
       toast({
         title: "Account created",
-        description: "Please check your email to confirm your account.",
+        description: "Please check your email for account confirmation.",
       })
 
       router.push("/login")
