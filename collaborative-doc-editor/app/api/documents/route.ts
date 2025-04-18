@@ -5,7 +5,7 @@ import { type NextRequest, NextResponse } from "next/server"
 export async function GET(request: NextRequest) {
   const supabase = createRouteHandlerClient({ cookies })
 
-  // Check if user is authenticated
+  // Checks if user is authenticated
   const {
     data: { session },
   } = await supabase.auth.getSession()
@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    // Get documents for the current user
+    // Get documents for the current user session
     const { data, error } = await supabase
       .from("documents")
       .select(`
