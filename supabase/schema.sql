@@ -1,6 +1,6 @@
 -- Create tables for the collaborative document editor
 
--- Enabling the  UUID extension
+-- Enable UUID extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- Users table (managed by Supabase Auth)
