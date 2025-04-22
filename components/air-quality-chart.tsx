@@ -7,6 +7,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 interface AirQualityData {
   timestamp: string
+  aqi: number
   pm25: number
   pm10: number
   o3: number
@@ -20,14 +21,13 @@ interface AirQualityChartProps {
   cityName: string
 }
 
-export  function AirQualityChart({ data, cityName }: AirQualityChartProps) {
+export function AirQualityChart({ data, cityName }: AirQualityChartProps) {
   const [timeRange, setTimeRange] = useState<"24h" | "7d" | "30d">("24h")
-
+  
   // Filter data based on selected time range
   const filteredData = data.filter((entry) => {
     const entryDate = new Date(entry.timestamp)
     const now = new Date()
-
     if (timeRange === "24h") {
       return now.getTime() - entryDate.getTime() <= 24 * 60 * 60 * 1000
     } else if (timeRange === "7d") {
@@ -36,7 +36,7 @@ export  function AirQualityChart({ data, cityName }: AirQualityChartProps) {
       return now.getTime() - entryDate.getTime() <= 30 * 24 * 60 * 60 * 1000
     }
   })
-
+  
   // Format timestamp for display
   const formattedData = filteredData.map((entry) => ({
     ...entry,
@@ -47,7 +47,7 @@ export  function AirQualityChart({ data, cityName }: AirQualityChartProps) {
       day: timeRange !== "24h" ? "numeric" : undefined,
     }),
   }))
-
+  
   return (
     <Card className="w-full">
       <CardHeader>
