@@ -18,7 +18,7 @@ interface AirQualityCardProps {
   updatedAt: string
 }
 
-export default function AirQualityCard({
+export function AirQualityCard({
   cityName,
   aqi,
   pm25,
