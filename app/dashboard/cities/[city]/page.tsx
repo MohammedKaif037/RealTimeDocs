@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Users, Clock, Wind, Thermometer, Droplets, Gauge } from "lucide-react"
-import AirQualityCard from "@/components/air-quality-card"
+// import AirQualityCard from "@/components/air-quality-card"
+import  AirQualityCard  from '../../../../../components/air-quality-card'
 import AirQualityChart  from "@/components/air-quality-chart"
 import AirQualityInsight  from "@/components/air-quality-insight"
 
