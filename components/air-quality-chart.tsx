@@ -20,7 +20,7 @@ interface AirQualityChartProps {
   cityName: string
 }
 
-export default function AirQualityChart({ data, cityName }: AirQualityChartProps) {
+export  function AirQualityChart({ data, cityName }: AirQualityChartProps) {
   const [timeRange, setTimeRange] = useState<"24h" | "7d" | "30d">("24h")
 
   // Filter data based on selected time range
