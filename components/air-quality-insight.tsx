@@ -14,7 +14,7 @@ interface AirQualityInsightProps {
   cityName: string
 }
 
-export default function AirQualityInsight({
+export function AirQualityInsight({
   aqi,
   pm25,
   humidity,
